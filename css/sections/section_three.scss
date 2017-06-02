@@ -1,0 +1,103 @@
+.section-three{
+	//height: 1130px;
+	@include box-sizing();
+	background: url(../img/pattern.png);
+}
+.content3{
+	padding-bottom: 40px;
+}
+.section-color{
+	background-color: rgba(#ffb113, .8);
+	width: 100%;
+	height: 100%;
+}
+.content3__header{
+	text-align: center;
+	padding-top: 90px;
+	//width: 800px;
+	margin: 0 auto;
+	@include mobile{
+		padding-top: 60px;
+	}
+}
+.content3__header-title{
+	@include fira();
+	font-size: 36px;
+	color: #393939;
+	@include mobile{
+		font-size: 28px;
+	}
+}
+.content3__header-text{
+	font-size: 16px;
+	color: #984313;
+	margin-top: 15px;
+	@include mobile{
+		font-size: 12px;
+		padding: 0 15px;
+	}
+}
+.content3__list{
+	text-align: center;
+}
+.content3__item{
+	display: inline-block;
+	width: 230px;
+	margin-bottom: 55px;
+	margin-right: 45px;
+	&:nth-child(4n){
+		margin-right: 0;
+		@include tablet{
+		margin-right: 45px;
+	}
+	@include mobile{
+		margin-right: 0;
+	}
+	}
+	@include tablet{
+		width: 200px;
+		margin: 30px 15px;
+	}
+	@include mini-table{
+		width: 160px;
+		margin: 30px 16px;
+	}
+	@include mobile{
+		width: 160px;
+		margin: 30px auto;
+	}
+}
+.content3__item-img{
+	width: 175px;
+	margin: 0 auto;
+	img{
+		display: block;
+		width: 100%;
+	}
+	@include mini-table{
+		width: 150px;
+	}
+}
+.content3__item-name{
+	text-align: center;
+	color: #393939;
+	font-size: 28px;
+	@include fira();
+	margin-top: 15px;
+	@include mini-table{
+		font-size: 24px;
+	}
+}
+.content3__item-text{
+	margin-top: 10px;
+	text-align: center;
+	color: #ab594a;
+	font-size: 15px;
+	@include mini-table{
+		font-size: 13px;
+	}
+}
+.content3__form{
+	text-decoration: underline;
+	color: black;
+}

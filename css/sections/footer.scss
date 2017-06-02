@@ -1,0 +1,99 @@
+.footer{
+	//height: 125px;
+	background: white;
+	padding-bottom: 30px;
+}
+.logo__footer{
+	padding-top: 25px;
+	margin-top: 0;
+	@include inlineblock(top);
+	@include mini-table{
+		text-align: center;
+		width: 100%;
+	}
+	@include mobile{
+		text-align: center;
+		width: 100%;
+	}
+}
+.footer__list{
+	display: inline-block;
+	margin-top: 47px;
+	@include tablet{
+		text-align: center;
+		width: 100%;
+		margin-top: 30px;
+	}
+	@include mini-table{
+		text-align: center;
+		width: 100%;
+		margin-top: 30px;
+	}
+	@include mobile{
+		text-align: center;
+	}
+}
+.footer__item{
+	@include inlineblock(middle);
+	margin-left: 22px;
+	color: #8d8d8d;
+	font-size: 14px;
+	&:nth-child(2){
+		@include mini-table{
+			display: block;
+			padding-bottom: 5px;
+		}
+	}
+	&:nth-child(3){
+		@include tablet{
+			margin-left: 200px;
+		}
+	}
+	@include mini-table{
+		margin: 5px 10px;
+	}
+	@include mobile{
+		margin: 5px 10px;
+	}
+
+}
+.footer__socials{
+	display: inline-block;
+	margin-top: 47px;
+	vertical-align: top;
+	@include tablet{
+		text-align: center;
+        width: 100%;
+        margin-top: 30px;
+	}
+}
+.social__item{
+	display: inline-block;
+	margin-left: 22px;
+	&:first-child{
+		@include tablet{
+			margin-left: 0;
+		}
+		@include mini-table{
+			margin-left: 0;
+		}
+		@include mobile{
+			margin-left: 0;
+		}
+	}
+
+}
+@each $social in (facebook,insta,ok,tw,vk){
+	.social-#{$social}{
+		width: 25px;
+		height: 25px;
+		display: block;
+		background: url(../img/icons/#{$social}.png) center center no-repeat;
+	}
+	.social-#{$social}:hover{
+		width: 25px;
+		height: 25px;
+		display: block;
+		background: url(../img/icons/#{$social}-active.png) center center no-repeat;
+	}
+}

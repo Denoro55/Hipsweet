@@ -1,0 +1,76 @@
+@mixin box-shadow($params){
+    box-shadow: $params;
+    -webkit-box-shadow: $params;
+    -moz-box-shadow: $params;
+}
+
+@mixin transition($params){
+    -webkit-transition: $params;
+    transition: $params;
+}
+@mixin transform($params){
+    -ms-transform: $params;
+    -webkit-transform: $params;
+    -webkit-transform: $params;
+    -moz-transform: $params;
+}
+@mixin box-sizing(){
+    -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+%clearfix{
+    &:after{
+    content: "";
+    display: block;
+    clear: both;
+    }
+}
+
+//Функция превращения всех пикселей в rem
+
+@function rem($px){
+    @return $px / 16px + 0rem;
+}
+
+//Примесь для подключения инлайн блоков
+
+@mixin inlineblock($valign: top){
+    display: inline-block;
+    vertical-align: $valign;
+}
+
+//Блок примесей для обертки свойств в адаптив 
+
+@mixin desktop{
+    @media screen and (max-width: 1200px){
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media screen and (max-width: 960px){
+        @content;
+    }
+}
+
+@mixin mini-table{
+    @media screen and (max-width: 750px){
+        @content;
+    }
+}
+
+
+@mixin mobile{
+    @media screen and (max-width: 480px){
+        @content;
+    }
+}
+
+
+
+
+
+
+
+

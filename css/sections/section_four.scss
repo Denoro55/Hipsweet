@@ -1,0 +1,395 @@
+.section-four{
+	//height: 1425px;
+	background: radial-gradient( circle at 50% 50%, #fbfafc, #dcdcdb);
+	padding-bottom: 80px;
+}
+.content4__header{
+	padding-top: 95px;
+	@extend %clearfix;
+	@include mobile{
+		padding-top: 60px;
+	}
+}
+.content4__header_left{
+	float: left;
+	max-width: 330px;
+	color: #2b2f60;
+	font-size: 62px;
+	@include fira();
+	@include tablet{
+		max-width: 100%;
+		text-align: center;
+		float: none;
+	}
+	@include mini-table{
+		font-size: 42px;
+		max-width: 100%;
+		text-align: center;
+		float: none;
+	}
+	@include mobile{
+		font-size: 32px;
+		float: none;
+		text-align: center;
+	}
+}
+.content4__header_right{
+	float: right;
+	width: 750px;
+	margin-top: 20px;
+	@include tablet{
+		margin-top: 40px;
+	}
+	@include mini-table{
+		width: inherit;
+	}
+	@include mobile{
+		width: inherit;
+	}
+}
+.content4__list{
+	text-align: right;
+	@include mini-table{
+		text-align: center;
+	}
+	@include mobile{
+		text-align: center;
+	}
+}
+.content4__item{
+	display: inline-block;
+	text-align: left;
+	margin-right: 15px;
+	&:last-child{
+		margin-right: 0;
+	}
+	@include mini-table{
+		margin: 15px 10px;
+		vertical-align: top;
+	}
+}
+.content4__body{
+	display: block;
+	width: 229px;
+	height: 154px;
+	@include box-sizing();
+	padding: 10px 20px;
+	&:hover{
+		cursor: pointer;
+	}
+	@include mini-table{
+		width: 180px;
+	}
+}
+.content4__body-title{
+	font-size: 28px;
+	color: #2b2f60;
+	@include fira();
+	@include mini-table{
+		font-size: 20px;
+	}
+}
+.content4__body-text{
+	margin-top: 10px;
+	color: #a6a6a6;
+	font-size: 16px;
+	@include mini-table{
+		font-size: 14px;
+	}
+}
+.item-active{
+	background: url(../img/holder.png) 0 0 no-repeat;
+	background-size: contain;
+	.content4__body-title{
+		color: #ffa92b;
+	}
+	.content4__body-text{
+		color: white;
+	}
+}
+.maincontent4{
+	@extend %clearfix;
+	margin-top: 100px;
+	@include mini-table{
+		margin-top: 40px;
+		padding: 0 20px;
+	}
+	@include mobile{
+		margin-top: 50px;
+		padding: 0 20px;
+	}
+}
+.content4__left{
+float: left;
+width: 280px;
+position: relative;
+	&:after{
+		position: absolute;
+		content: "";
+		display: block;
+		background: url(../img/comma.png) 0 0 no-repeat;
+		width: 50px;
+		height: 41px;
+		left: 115%;
+		top: -25px;
+	}
+	@include mini-table{
+	text-align: center;
+	width: 100%;
+}
+@include mobile{
+	text-align: center;
+	width: 100%;
+}
+} 
+.content4__middle{
+float: left;
+width: 470px;
+height: 496px;
+position: relative;
+img{
+	position: absolute;
+	left: 5%;
+	top: -50px;
+	width: 100%;
+	@include tablet{
+		left: 0;
+	}
+	@include mini-table{
+		left: -10%;
+    	top: 25%;
+	}
+	@include mobile{
+		left: -10%;
+    	top: 25%;
+	}
+}
+@include mobile{
+	width: 350px;
+}
+} 
+.content4__right{
+float: right;
+width: 350px;
+position: relative;
+@include box-sizing();
+@include tablet{
+	padding: 0 20px 80px 20px;
+	width: 100%;
+	text-align: center;
+	margin-top: 40px;
+}
+@include mini-table{
+	margin-top: 220px;
+	width: 100%;
+	text-align: center;
+	padding-bottom: 70px;
+}
+@include mobile{
+	padding-top: 40px;
+	margin-top: 120px;
+	width: 100%;
+	text-align: center;
+	padding-bottom: 30px;
+}
+} 
+.content4__left, .content4__right{
+	color: #747474;
+	font-size: 14px;
+}
+.str{
+	color: #484848;
+}
+.content4__form{
+	border-radius: 20px;
+	position: relative;
+	@extend %clearfix;
+	width: 843px;
+	height: 408px;
+	margin: 0 auto;
+	background: url(../img/back-choc.png);
+	@include tablet{
+		width: 80%;
+		height: 100%;
+	}
+	@include mini-table{
+		width: 100%;
+		height: 100%;
+	}
+	@include mobile{
+		width: 100%;
+		height: 100%;
+	}
+}
+.form4__left{
+	width: 437px;
+	float: left;
+	text-align: center;
+	color: white;
+	padding-top: 132px;
+	@include fira();
+	font-size: 62px;
+	@include tablet{
+		padding: 100px 0;
+		width: 100%;
+		font-size: 48px;
+	}
+	@include mini-table{
+		padding: 70px 0;
+		font-size: 42px;
+		width: 100%;
+	}
+	@include mobile{
+		padding: 32px 0;
+		font-size: 42px;
+		width: 100%;
+	}
+}
+.form4__right{
+	float: left;
+	width: (843px)-(437px);
+	background: url(../img/back-black.png);
+	height: 100%;
+	@include tablet{
+		width: 100%;
+		text-align: center;
+		padding-bottom: 70px;
+		background-size: 110%;
+	}
+	@include mini-table{
+		width: 100%;
+		text-align: center;
+		padding-bottom: 70px;
+		background-size: 110%;
+	}
+	@include mobile{
+		width: 100%;
+		text-align: center;
+		padding-bottom: 70px;
+	}
+}
+
+// FORMS
+
+.form__name{
+	margin-top: 60px;
+	width: 280px;
+	@include box-sizing();
+	@include tablet{
+		width: 100%;
+	}
+	@include mini-table{
+		width: 100%;
+	}
+	@include mobile{
+		width: 100%;
+	}
+}
+.form__text{
+	color: white;
+	font-size: 16px;
+}
+.form4{
+	padding-left: 50px;
+	@include tablet{
+		padding-left: 0;
+	}
+	@include mini-table{
+		padding-left: 0;
+	}
+	@include mobile{
+		padding-left: 0;
+	}
+}
+.form__forms{
+	border: none;
+	border-bottom: 1px solid white;
+	background: none;
+	width: 280px;
+	color: white;
+	@include tablet{
+		text-align: center;
+	}
+	@include mini-table{
+		text-align: center;
+	}
+	@include mobile{
+		text-align: center;
+	}
+}
+input:focus{
+	outline: none;
+	color: white;
+}
+.form__email, .form__phone{
+	margin-top: 40px;
+}
+#mask{
+	border: none;
+}
+.form__back_call{
+	margin-top: 35px;
+}
+#back_call{
+	margin-right: 10px;
+}
+label{
+	color: white;
+}
+.submit_inp-btn{
+	border: 0;
+	width: 96px;
+	height: 96px;
+	border-radius: 50%;
+	background: url(../img/arrow.png) center center no-repeat;
+	@include mobile{
+		width: 72px;
+		height: 72px;
+	}
+	&:hover{
+		cursor: pointer;
+		background: url(../img/arrow-active.png) center center no-repeat;
+	}
+}
+.submit_btn{
+	width: 96px;
+	height: 96px;
+	background: #ffb100;
+	border-radius: 50%;
+	position: absolute;
+	left: 100%;
+	transform: translateX(-50%);
+	&:hover{
+		background: #641a00;
+	}
+	@include tablet{
+		left: 50%;
+		top: 94%;
+	}
+	@include mini-table{
+		left: 50%;
+		top: 94%;
+	}
+	@include mobile{
+		left: 50%;
+		top: 94%;
+		width: 72px;
+		height: 72px;
+	}
+}
+.special,.content4__right-shadow{
+	position: absolute;
+	top: 0;
+	opacity: 0;
+	transition: opacity 1s 1s;
+	width: 95%;
+	right: 0;
+    left: 0;
+}
+.text-active{
+	opacity: 1;
+	transition: opacity 1s 1s;
+}
+.content4__test{
+	opacity: 0;
+}

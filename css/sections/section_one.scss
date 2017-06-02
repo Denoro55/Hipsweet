@@ -1,0 +1,322 @@
+.sidebar{
+	float: left;
+	width: 16%;
+	@include mini-table{
+	width: 35%;
+}
+}
+.nav__ingredients{
+	margin-top: 155px;
+	width: 140px;
+	text-align: center;
+	@include mini-table{
+		margin-top: 90px;
+	}
+}
+.ingr__icon{
+	position: relative;
+		.ingr__dropdown{
+			z-index: 1;
+			position: absolute;
+			opacity: 0;
+			left: -9999px;
+			padding: 35px;
+			box-sizing: border-box;
+			top: -50px;
+			&:after{
+				content: "";
+				display: block;
+				width: 30px;
+				height: 30px;
+				border-right: 1px solid white;
+				border-bottom: 1px solid white;
+				transform: rotate(45deg);
+				position: absolute;
+				left: 0;
+				margin-left: -15px;
+				margin-top: -15px;
+				top: 28%;
+				background: white;
+				@include mobile{
+					content: "";
+					display: block;
+					width: 30px;
+					height: 30px;
+					border-right: 1px solid white;
+					border-bottom: 1px solid white;
+					transform: rotate(45deg);
+					position: absolute;
+					left: 20%;
+					margin-left: -15px;
+					margin-top: -15px;
+					top: 0;
+					background: white;
+				}
+			}
+			&:before{
+			content: "";
+			display: block;
+			position: absolute;
+			left: -60px;
+			up: 0;
+			bottom: 0;
+			height: 240px;
+			width: 60px;
+	}
+		}
+}
+.ingr__icon{
+	margin: 0 auto;
+	display: block;
+	background: url(../img/icons/Shape-2.png) 0 0 no-repeat;
+	width: 41px;
+	height: 41px;
+	border-radius: 50%;
+
+	&:after{
+		content: "";
+		display: block;
+		background: url(../img/icons/ingr.png) center center no-repeat;
+		width: 41px;
+		height: 41px;
+	}
+
+	&:hover{
+    cursor: pointer;
+		.ingr__dropdown{
+			@include transition(opacity ease 1s 0s);
+			opacity: 1;
+			left: 100px;
+			@include mobile{
+				left: -37px;
+    		    top: 305%;
+			}
+		}
+
+		background: url(../img/icons/Shape-3.png) 0 0 no-repeat;
+		&:after{
+		background: url(../img/icons/ingr-active.png) center center no-repeat;
+	}
+	}
+}
+.ingr__text{
+	font-size: 16px;
+	color: white;
+	margin-top: 20px;
+}
+.nav__term{
+	margin-top: 200px;
+	text-align: center;
+	width: 140px;
+	@include mobile{
+		padding-left: 10px;
+	}
+}
+.term__title{
+	font-size: 13px;
+	color: white;
+	opacity: .28;
+}
+.term__content{
+	font-size: 24px;
+	@include fira();
+	color: white;
+}
+.ingr__dropdown{
+	width: 380px;
+	//height: 245px;
+	background: white;
+	border-radius: 15px;
+	@include mini-table{
+		width: 290px;
+		font-size: 12px;
+		padding: 20px;
+	}
+}
+td{
+	text-align: left;
+	padding-bottom: 12px;
+}
+.flour{
+	width: 20%;
+	display: block;
+	background: url(../img/icons/flour.png) 0 0 no-repeat;
+	width: 21px;
+	height: 21px;
+}
+.count{
+	width: 15%;
+	@include mini-table{
+		width: 20%;
+	}
+}
+.product{
+	width: 70%;
+}
+
+@each $product in (flour,eggs,sugar,oil,milk){
+	.#{$product}{
+		background: url(../img/icons/#{$product}.png) center 0 no-repeat;
+		display: block;
+		width: 26px;
+		height: 21px;
+	}
+}
+
+
+.content__left{
+	float: left;
+	width: 40%;
+	text-align: center;
+	@include mini-table{
+		width: 60%;
+		float: left;
+	}
+}
+.content__cream{
+	margin-top: 95px;
+	position:  relative;
+	width: 420px;
+	height: 380px;
+	img{
+		width: 100%;
+		position:  absolute;
+    	left: 8%;
+    	@include tablet{
+    		left: 0%;
+    	}
+	}
+	@include tablet{
+		width: 340px;
+		margin-left: 8px;
+	}
+	@include mini-table{
+		margin-top: 35px;
+		margin-left: -40px;
+	}
+	@include mobile{
+		width: 238px;
+    	margin-left: -45px;
+    	margin-top: 116px
+	}
+}
+.text-cream{
+	font-size: 150px;
+	opacity: .1;
+	position:  absolute;
+	top: 36%;
+	left: -38%;
+	@include fira();
+	color: white;
+	@include mini-table{
+		font-size: 65px;
+   		left: -30%;
+		top: 50%;
+	}
+	@include mobile{
+		font-size: 40px;
+        left: -16%;
+        top: 35%;
+	}
+}
+
+.content__right{
+	float: right;
+	width: 40%;
+	padding-top: 100px;
+
+	@include tablet{
+		width: 37%;	
+	}
+	@include mini-table{
+		width: 100%;
+		text-align: center;
+		padding-top: 50px;
+	}
+	@include mobile{
+		padding-top: 0px;
+	}
+
+}
+.content__right-title{
+	font-size: 62px;
+	color: white;
+	@include fira();
+
+	@include tablet{
+		font-size: 48px;	
+	}
+	@include mobile{
+		font-size: 28px;	
+	}
+}
+.content__right-text{
+	color: white;
+	font-size: 15px;
+	margin-top: 30px;
+	@include mobile{
+		padding: 0 30px;
+	}
+}
+.content__right-down{
+	margin-top: 20px;
+}
+.content__right-price{
+	font-size: 62px;
+	color: white;
+	@include fira();
+	@include inlineblock(middle);
+
+	@include tablet{
+		font-size: 44px;	
+	}
+
+}
+.content__right-buy{
+	@include inlineblock(middle);
+	margin-left: 45px;
+}
+.btn__buy{
+	font-size: 14px;
+	color: #a4151c;
+	padding: 15px 25px;
+	border-radius: 20px;
+	background: #fca211;
+	font-weight: bold;
+	&:hover{
+		background: #641a00;
+		color:  #fca211;
+	}
+}
+.content__sliders{
+	float: left;
+	width: 100%;
+	text-align: center;
+	margin-top: 40px;
+}
+.sliders__item{
+	display: inline-block;
+	margin: 0 16px;
+}
+.slider__link{
+	display: block;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+	position: relative;
+	&:after{
+		content: "";
+		display: block;
+		width: 24px;
+		height: 24px;
+		position: absolute;
+		transform: translate(-50%,-50%);
+		border-radius: 50%;
+		left: 50%;
+		top: 50%;
+	}
+	&:hover{
+		transform: scale(2,2);
+	}
+}
